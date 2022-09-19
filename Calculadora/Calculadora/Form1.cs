@@ -87,6 +87,7 @@ namespace Calculadora
             try
             {
                 miEmpleado.Edad = int.Parse(txtEdad.Text);
+                MessageBox.Show($"Edad del empleado {miEmpleado.Edad}");
             }
             catch (IndexOutOfRangeException x)
             {
@@ -94,6 +95,7 @@ namespace Calculadora
                 MessageBox.Show(x.StackTrace);
                 return;
             }
+            txtEdad.Text = "";
         }
 
         private void label8_Click(object sender, EventArgs e)
